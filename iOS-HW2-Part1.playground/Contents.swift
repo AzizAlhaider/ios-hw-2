@@ -30,10 +30,33 @@ import UIKit
  #
  اكثر من 40 -> سمنة مفرطه
 */
+var weight = 90.0
+var height = 175.0
+var bmi = 20.0
 
-
-
-
+func bmical(weight: Double , height: Double)-> String{
+    
+    let bmi = weight / ((height * height) / 10000)
+    
+    if bmi < 18.5 {
+           return("ضعيف")
+       }
+       else if bmi >= 18.5 && bmi <= 30.0{
+           return("وزن طبيعي")
+       }
+    else if bmi >= 30.1 && bmi <= 40.0{
+           return("سمنة خفيفة")
+       }
+    else if bmi > 40.0{
+           return("سمنة مفرطة")
+       }
+    
+ 
+    return "\(bmi)"
+   
+}
+let bmical2 = bmical(weight: 130, height: 175)
+print(bmical2)
 
 //: # 2️⃣  السؤال الثاني
 
@@ -52,3 +75,21 @@ import UIKit
  و اذا كان فوق ١٨ سوف يتم طباعة نص بأن المتقدم يُسمح له بإمتلاك رخصة قيادة
 */
 
+
+
+
+
+var name = "Aziz"
+var age = 17
+
+func license(name: String, age: Int){
+    if age < 18 {
+        print("المتقدم \(name) لم يكمل العمر المطلوب ")
+    }
+    else if age >= 18  {
+        print("يسمح للمتقدم \(name) بامتلاك رخصة قيادة ")
+    }
+   
+}
+let license2 = license(name: "عبدالعزيز", age: 17)
+   print(license2)
